@@ -1,0 +1,11 @@
+span {
+    font-weight: bold;
+}
+
+span.correct {
+    color: #0d6c0d;
+}
+
+span.incorrect {
+    color: #cb0000;
+}

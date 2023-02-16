@@ -1,0 +1,12 @@
+table * {
+    border: 1px solid #000000;
+}
+
+table td,
+table th {
+    min-width: 200px;
+}
+
+table th {
+    background-color: #b6fefe;
+}
