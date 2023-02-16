@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TC2005B | Laboratorio 1</title>
+    <!-- <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/container.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/interests.css">
+    <link rel="stylesheet" href="styles/experience.css">
+    <link rel="stylesheet" href="styles/questions.css">
+    <link rel="stylesheet" href="styles/send-msg.css"> -->
+
+    <!-- Minified CSS -->
+    <link rel="stylesheet" href="styles/main.min.css">
+    <title>TC2005B | Laboratorio 3</title>
 </head>
 
 <body>
     <header>
         <h1>
-            TC2005B | Laboratorio 1
+            TC2005B | Laboratorio 3
         </h1>
         <article>
             <h4>
@@ -60,13 +70,12 @@
     </nav>
     <main>
         <header>
-            Esta página web es el resultado del laboratorio 1 de la materia de <abbr
+            Esta página web es el resultado del laboratorio 3 de la materia de <abbr
                 title="Construcción de software y toma de decisiones">TC2005B</abbr>. En esta página hay información
             relevante, casi relevante y absolutamente nada
             relevante de mí. Este laboratorio está diseñado para que aprendamos el buen uso de las etiquetas de <abbr
                 title="Hyper Text Markup Language">HTML</abbr> principalmente... Así que como podrán ver, este página no
-            tiene nada de estilos
-            <abbr title="Cascade Styling Sheets">CSS</abbr> ni funcionalidad con JavaScript. Aún así... espero les guste
+            tiene nada de funcionalidad con JavaScript. Aún así... espero les guste
             la página :)
         </header>
         <section id="about-me">
@@ -94,15 +103,17 @@
                 <h3>
                     Yo en fotos:
                 </h3>
-                <img src="assets/img/imagen_1.jpeg" height="200" alt="Yo con mi mascota" title="Yo con mi mascota">
-                <img src="assets/img/imagen_2.jpeg" height="200" alt="Mi imagen de perfil de LinkedIn"
-                    title="Mi imagen de perfil de LinkedIn">
-                <img src="assets/img/imagen_3.jpeg" height="200" alt="Yo sosteniendo un gran queso"
-                    title="Yo sosteniendo un gran queso">
-                <img src="assets/img/imagen_4.jpeg" height="200" alt="En la ExpoIngenierías"
-                    title="En la ExpoIngenierías">
+                <div class="container_photos">
+                    <img src="assets/img/imagen_1.jpeg" height="200" alt="Yo con mi mascota" title="Yo con mi mascota">
+                    <img src="assets/img/imagen_2.jpeg" height="200" alt="Mi imagen de perfil de LinkedIn"
+                        title="Mi imagen de perfil de LinkedIn">
+                    <img src="assets/img/imagen_3.jpeg" height="200" alt="Yo sosteniendo un gran queso"
+                        title="Yo sosteniendo un gran queso">
+                    <img src="assets/img/imagen_4.jpeg" height="200" alt="En la ExpoIngenierías"
+                        title="En la ExpoIngenierías">
+                </div>
             </article>
-            <article>
+            <article id="about_me_article_details">
                 <h3>
                     Datos nada importantes de mí:
                 </h3>
@@ -207,7 +218,7 @@
                             Fue intern de Meta en el programa de Meta University. Estuve trabajando en el equipo de
                             desarrollo web.
                         </p>
-                        <p>
+                        <p class="container_photos">
                             <img src="assets/img/imagen_5.jpg" height="150" alt="Yo con todos los interns"
                                 title="Yo con todos los interns">
                             <img src="assets/img/imagen_6.jpg" height="150" alt="Yo con otros interns mexicanos"
@@ -328,8 +339,7 @@
 
                 </li>
                 <li>
-                    <strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas
-                        tu usuario y contraseña en algún sitio? ¿Por qué?</strong>
+                    <strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, ¿Por qué?</strong>
                     <p>
                         Se debe de usar el método: <strong>POST</strong>
                     </p>
@@ -349,8 +359,8 @@
                     </p>
                 </li>
                 <li>
-                    <strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que
-                        intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong>
+                    <strong>¿Es responsabilidad del desarrollador corregir un sitio web si hay un error 404? ¿Por
+                        qué?</strong>
                     <p>
                         No es responsabilidad del desarrollador. Ya que un error 404 significa que un recurso solicitado
                         no existe. Como una página web. Los errores en el rango de los 400 son errores del cliente.
@@ -359,10 +369,11 @@
                     </p>
                 </li>
                 <li>
-                    <strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que
-                        intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</strong>
+                    <strong>¿Es responsabilidad del desarrollador corregir un sitio web si hay un error 500? ¿Por
+                        qué?</strong>
                     <p>
-                        Claro, ya que un error 500 significa que hubo un error en el servidor. Los errores en el rango de los 500 son errores
+                        Claro, ya que un error 500 significa que hubo un error en el servidor. Los errores en el rango
+                        de los 500 son errores
                         del lado del servidor (o se nuestro como desarrolladores).
                         Es responsabilidad del desarrollador manejar los procedimientos del servidor para que el
                         servidor se detenga por un proceso mal hecho.
@@ -370,7 +381,7 @@
                 </li>
                 <li>
                     <strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona
-                        algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong>
+                        algunos que estén desaprobados.</strong>
                     <p>
                         Significa que los navegadores ya no soportan (no las leen correctamente). Entonces el lenguaje
                         semántico que
@@ -578,8 +589,8 @@
                     <br>
                 </li>
                 <li>
-                    <strong>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente
-                        página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el
+                    <strong>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? (Al responder la pregunta recuerda
+                        poner el
                         navegador que utilizas)</strong>
                     <p>
                         Mi navegador: Google Chrome Versión 109.0.5414.119
@@ -668,6 +679,59 @@
                         </li>
                     </ol>
                 </li>
+                <li>
+                    <strong>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un
+                        CSS?</strong>
+                    <p>
+                        Lo mejor es usarlo lo menos posible, si se puede mejor no usarlo. Esto ya que ese comando hace
+                        que se ponga por delante la propiedad CSS
+                        que estamos escribiendo ante las demás, esto es malo ya que puede provocar que otros estilos que
+                        definamos no tengan efecto en este
+                        elemento HTML. Si llevamos un correct control de nuestras reglas CSS, no deberíamos usar esta
+                        regla.
+                    </p>
+                </li>
+                <li>
+                    <strong>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con
+                        cuidado?</strong>
+                    <p>
+                        Debe de escogerse con cuidado por:
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Visibilidad:</strong> el color de la imagen debe de hacer un buen contraste con el
+                            texto de la página.
+                        </li>
+                        <li>
+                            <strong>Rendimiento:</strong> si la imagen es muy pesada en la carga inicial va a tardar
+                            mucho la página en verse adecuadamente.
+                        </li>
+                        <li>
+                            <strong>Derechos de autor:</strong> hay que cuidar que todas las imágenes que usamos no
+                            tengan derechos de autor.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <strong>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad
+                        de estilo entre %, px y pt?</strong>
+                    <p>
+                        Las unidades fijas como (cm) no sirven mucho en las páginas web ya que la resolución y tamaño de cada pantalla varía, y el tamaño de la unidad va a
+                        ser la misma en cada pantalla... esto da como resultado poca usabilidad. Otras unidades como los pixeles (px) son mejores ya que se ajustan a la resolución de las pantallas.
+                        Las unidades relativas como porcentajes (%) se adaptan al tamaño relativo del contender padre de un elemento HTML, esto sirve para hacer una página web responsiva.
+                        <br>
+                        <br>
+                        En general, tenemos que elegir cómo es que se va a comportar el elemento al cual le vamos a asignar una medida para saber qué tipo de unidad es mejor.
+                    </p>
+                </li>
+                <li>
+                    <strong>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</strong>
+                    <p>
+                        Todo el archivo CSS lo va a cargar el navegador, eso conforma tanto el código como los espacios en blanco... y los espacios en blanco no impactan el código CSS. Por lo tanto al remover todo lo que no impacta nuestro
+                        código, va a ser que nuestra página cargue un archivo más pequeño. Esto es bueno para que la página cargue más rápido. También cuando se minimizada un archivo CSS las reglas
+                        que se repiten en múltiples selectores se agrupan para ocupar menos código. De esta manera tanto el código como los espacios en blanco son minimizados.
+                    </p>
+                </li>
             </ol>
         </section>
         <section id="send-msg">
@@ -678,23 +742,23 @@
                 <fieldset>
                     <legend>Mensaje para Rodrigo:</legend>
                     <label for="fname">Nombre:</label>
-                    <input required type="text" id="fname" name="fname"><br><br>
+                    <input placeholder="Ricardo" required type="text" id="fname" name="fname">
 
                     <label for="lname">Apellidos:</label>
-                    <input required type="text" id="lname" name="lname"><br><br>
+                    <input placeholder="Cortés" required type="text" id="lname" name="lname">
 
                     <label for="email">Correo electrónico:</label>
-                    <input required type="email" id="email" name="email"><br>
+                    <input placeholder="lalocuraporelhockey@gmail.com" required type="email" id="email" name="email">
 
                     <p>
                         Antes de escribirme el mensaje... contesta:
                         <br>
                         <input type="checkbox" id="javascript" name="fav_language" value="JavaScript">
-                        <label for="javascript">¿Te gusta JavaScript?</label><br>
-
+                        <label for="javascript">¿Te gusta JavaScript?</label>
+                        <br>
                         <input type="checkbox" id="pets" name="pet_lover" value="Mascotas">
-                        <label for="pets">¿Te gustan las mascotas?</label><br>
-
+                        <label for="pets">¿Te gustan las mascotas?</label>
+                        <br>
                         <input type="checkbox" id="exercise" name="fav_exercise" value="Calistenia">
                         <label for="exercise">¿Te gusta la calistenia?</label>
                     </p>
@@ -704,9 +768,7 @@
                     </p>
 
                     <label for="msg">Mensaje:</label>
-                    <br>
                     <textarea required name="message" id="msg" cols="100" rows="10"></textarea>
-                    <br>
                     <button type="submit">Mandar</button>
                 </fieldset>
             </form>
