@@ -1,13 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
     <title>TC2005B | Laboratorio 4 - Función 6</title>
 </head>
+
 <body>
+    <h1>
+        Trapping Rain Water <span><a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank"
+                rel="noopener">#42</a></span>
+    </h1>
+    <main>
+        <p>
+            Dado <code class="codeinline">n</code> números enteros positivos que representan la elevación de un mapa en
+            donde el ancho de
+            cada barra es <code class="codeinline">1</code>, computa cuánta agua se queda atrapada después de llover.
+        </p>
+        <section>
+            <h2>
+                Ejemplo 1:
+            </h2>
+            <img src="./assets/img/rainwatertrap.png" alt="Trapping Rain Water">
+            <div>
+                <p class="codeblock">
+                    Input: height = [0,1,0,2,1,0,1,3,2,1,2,1] <br>
+                    Output: 6 <br>
+                    Explanation: The above elevation map (black section) is represented by array <br>
+                    [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are <br>
+                    being trapped.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>
+                Ejemplo 2:
+            </h2>
+            <div>
+                <p class="codeblock">
+                    Input: height = [4,2,0,3,2,5] <br>
+                    Output: 9
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>
+                Restricciones
+            </h2>
+            <ul>
+                <li>
+                    <code class="codeinline">
+                        n == height.length
+                    </code>
+                </li>
+                <li>
+                    <code class="codeinline">
+                        1 <= n <= 2 * 104
+                    </code>
+                </li>
+                <li>
+                    <code class="codeinline">
+                        0 <= height[i] <= 105
+                    </code>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>
+                Visualizador
+            </h2>
+            <div class="controllers">
+                <button id="btn-random">Generar edificios aleatorios</button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span>
+                    Número de edificios:
+                </span>
+                <input maxlength="3" type="text" name="quantity" id="quantity-input" placeholder="Cantidad de edificios"
+                    value="100">
+            </div>
+            <div class="error"></div>
+            <div id="container"></div>
+            <div id="result"></div>
+        </section>
+    </main>
     <script src="./js/index.js"></script>
     <script src="./js/index.test.js"></script>
 </body>
+
 </html>

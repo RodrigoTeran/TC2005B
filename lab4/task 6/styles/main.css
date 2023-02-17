@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+.codeinline {
+
+    border-radius: 5px;
+    padding: 2.5px 5px;
+    background-color: rgb(114, 114, 114);
+    color: #FFF;
+}
+
+.codeblock {
+    width: fit-content;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(114, 114, 114);
+    color: #FFF;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.error {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+#container {
+    display: flex;
+    align-items: flex-end;
+}
+
+#container div {
+    background-color: #000;
+    width: 30px;
+}
+
+.run {
+    margin-top: 20px;
+}
+
+#result {
+    margin-top: 15px;
+    color: #008000;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+
+.controllers button {
+    background-color: #d9d8ef;
+    padding: 5px 19px;
+    border: none;
+    cursor: pointer;
+    transition: background-color ease-out 150ms;
+    font-weight: bold;
+}
+
+.controllers input[type="text"] {
+    padding: 3px 5px;
+    width: 200px;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .controllers button:hover {
+        background-color: #b8b7c8;
+    }
+    #container div:hover {
+        background-color: rgb(108, 99, 99);
+    }
+}
