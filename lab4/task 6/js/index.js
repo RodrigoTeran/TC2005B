@@ -91,7 +91,7 @@ class Manipulation {
             this.error.innerHTML = "Debes de poner un número...";
             return;
         }
-        if (number === "" || number === 0) {
+        if (number === "" || number <= 0) {
             this.error.innerHTML = "Debes de poner un número mayor a 0...";
             return;
         }
