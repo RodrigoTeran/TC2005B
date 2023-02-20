@@ -1,0 +1,24 @@
+#about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#about_me_article_details details summary {
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+#about_me_article_details details[open] summary {
+    background-color: var(--gray-400);
+}
+
+#about_me_article_details details p {
+    padding: 5px 20px;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    #about_me_article_details details summary:hover {
+        background-color: var(--gray-400);
+    }
+}

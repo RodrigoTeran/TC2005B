@@ -1,0 +1,21 @@
+.container_photos {
+    width: fit-content;
+    background-color: var(--gray-300);
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.container_photos img {
+    display: block;
+    transition: transform ease-out 150ms;
+    background-color: var(--white);
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .container_photos img:hover {
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,12 @@
+#interests ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+#interests {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
