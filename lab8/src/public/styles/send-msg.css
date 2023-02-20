@@ -1,0 +1,52 @@
+#send-msg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#send-msg form fieldset {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#send-msg form legend {
+    background-color: var(--blue-300);
+    color: var(--white);
+    padding: 2.5px 10px;
+    border-radius: 10000px;
+}
+
+#send-msg form input,
+#send-msg form textarea {
+    border: 1px solid var(--black);
+    padding-left: 10px;
+    border-radius: 10px;
+    resize: none;
+}
+
+#send-msg form textarea {
+    padding: 10px;
+}
+
+#send-msg form input[type="text"],
+#send-msg form input[type="email"] {
+    height: 1.75rem;
+    width: 300px;
+}
+
+#send-msg form button[type="submit"] {
+    background-color: var(--blue-100);
+    height: 50px;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color ease-out 150ms;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    #send-msg form button[type="submit"]:hover {
+        background-color: var(--blue-200);
+    }
+}

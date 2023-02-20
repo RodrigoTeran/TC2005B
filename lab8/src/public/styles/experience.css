@@ -1,0 +1,17 @@
+#experience ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+#experience ol li a {
+    display: inline-flex;
+    margin-bottom: 5px;
+}
+
+#experience {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

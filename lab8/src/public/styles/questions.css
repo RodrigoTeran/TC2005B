@@ -1,0 +1,53 @@
+#questions ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+    list-style: none;
+    padding: 10px 30px;
+}
+
+#questions>ol {
+    gap: 20px;    
+}
+#questions figcaption {
+    margin-top: 5px;
+}
+
+#questions ol li ol {
+    list-style: decimal;
+}
+
+#questions>ol>li>strong {
+    background-color: var(--blue-400);
+    color: var(--white);
+    padding: 5px 20px;
+    display: block;
+    width: fit-content;
+    border-radius: 10000px;
+    margin-bottom: 10px;
+}
+
+#questions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--gray-200);
+    width: 1200px;
+    transform: translateX(-30px);
+}
+#questions h2 {
+    padding: 20px 30px;
+    padding-bottom: 0;
+}
+#questions table * {
+    border: 1px solid var(--black);
+}
+#questions table th {
+    background-color: var(--blue-300);
+    color: var(--white);
+    padding: 0 10px;
+}
+#questions table td {
+    padding: 0 10px;
+}
