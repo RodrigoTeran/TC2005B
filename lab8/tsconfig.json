@@ -6,8 +6,9 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "build",
-        "typeRoots": [
-            "./src/types"
+        "types": [
+            "jest",
+            "node"
         ]
     },
     "lib": [

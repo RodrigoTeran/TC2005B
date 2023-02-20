@@ -24,6 +24,10 @@ export const validate = (inputValue) => {
     if (!resSpecialChar) {
         return "La contraseña debe de tener al menos un caracter especial"
     }
-    
+
     return "Contraseña válida"
+}
+
+export const mean = (array: number[]): string => {
+    return (array.reduce((p, a) => p + a, 0) / array.length).toFixed(2);
 }
