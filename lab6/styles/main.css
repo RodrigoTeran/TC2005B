@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+}
+
+body {
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #1b1b1b;
+}
+
+#validate-result {
+    padding: 5px 20px;
+    border-radius: 10000px;
+}
+
+.correct {
+    background-color: rgb(10, 151, 10);
+}
+
+.incorrect {
+    background-color: rgb(172, 11, 11);
+}
+
+.title {
+    background-color: rgb(81, 3, 214);
+    padding: 7.5px 12px;
+    border-radius: 10000px;
+    margin: 10px 0;
+}
+
+form {
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+form input[type="text"] {
+    height: 40px;
+    font-size: 1.1rem;
+    padding-left: 10px;
+    color: #000;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+}
+
+form button[type="submit"] {
+    height: 40px;
+    padding: 0 20px;
+    cursor: pointer;
+    background-color: rgb(81, 3, 214);
+    border: none;
+}
+
+@media (hover: hover) and (pointer:fine) {
+    form button[type="submit"]:hover {
+        background-color: rgb(97, 28, 216);
+    }
+}
