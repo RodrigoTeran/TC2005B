@@ -4,6 +4,20 @@ let offset = 1;
 let isfetching = true;
 let limit = offset + step;
 
+async function addPokemon(pokemonName) {
+    const body = {
+        pokemon: pokemonName
+    }
+
+    await fetch("api/pokemon", {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+}
+
 function createPokemon(pokemon) {
     const div = document.createElement("div");
     const divText = document.createElement("div");
@@ -12,6 +26,9 @@ function createPokemon(pokemon) {
     divText.innerText = pokemon.name;
     div.appendChild(img);
     div.appendChild(divText);
+    div.addEventListener("click", async () => {
+        await addPokemon(pokemon.name);
+    });
     wrapper.appendChild(div);
 }
 
@@ -41,8 +58,8 @@ window.addEventListener("scroll", (e) => {
     let documentHeight = document.body.scrollHeight;
     let currentScroll = window.scrollY + window.innerHeight;
     // When the user is [modifier]px from the bottom, fire the event.
-    let modifier = 200; 
-    if(currentScroll + modifier > documentHeight && !isfetching) {
+    let modifier = 200;
+    if (currentScroll + modifier > documentHeight && !isfetching) {
         isfetching = true;
         fetchPokemons();
     }

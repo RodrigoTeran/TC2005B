@@ -24,11 +24,32 @@ h1 {
     gap: 20px;
     padding: 0 30px;
 }
-#memories > div {
+
+#memories>div {
     background-color: #FFF;
     border-radius: 5px;
     padding: 20px;
 }
-#memories > div .title {
+
+#memories>div .title {
     font-weight: bold;
+}
+
+.container {
+    padding: 0 30px;
+    margin: 20px 0;
+}
+
+.delete_memories {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .delete_memories:hover {
+        background-color: #DDD;
+    }
 }

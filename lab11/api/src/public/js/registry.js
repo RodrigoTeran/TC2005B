@@ -1,8 +1,11 @@
 const memories = document.getElementById("memories");
+const deleetBtn = document.getElementById("delete-btn");
 
 const getData = async () => {
     const res = await fetch("api/datos");
     const data = await res.json();
+
+    memories.innerHTML = "";
 
     try {
         for (let i = 0; i < data.msg.length; i++) {
@@ -25,3 +28,13 @@ const getData = async () => {
     } catch { };
 };
 getData();
+
+const deleteMemories = async () => {
+    await fetch("api/datos", {
+        method: "DELETE"
+    });
+    await getData();
+};
+
+
+deleetBtn.addEventListener("click", deleteMemories);

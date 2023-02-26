@@ -35,8 +35,42 @@ controller.createData = (req, res) => {
         createStream.end();
     });
 
+    return res.status(200).json({
+        msg: "Todo bien"
+    });
+};
 
+controller.createPokemonRegistry = (req, res) => {
+    const { pokemon } = req.body;
+    if (pokemon === undefined) {
+        return res.status(401).json({
+            msg: "Datos incompletos"
+        });
+    }
 
+    fs.readFile(path.join(__dirname, "../pokemons/index.txt"), 'utf-8', function (err, content) {
+        if (err) {
+            return;
+        }
+
+        const newValue = `${content}\n${pokemon}`;
+
+        fs.writeFileSync(path.join(__dirname, "../pokemons/index.txt"), newValue, 'utf-8');
+
+    });
+    return res.status(200).json({
+        msg: "Todo bien"
+    });
+};
+
+controller.deleteData = (_, res) => {
+    fs.readdirSync(path.join(__dirname, "../memories")).forEach(f => {
+        try {
+            fs.unlinkSync(path.join(__dirname, `../memories/${f}`));
+        } catch (error) {
+            console.log("error", error);
+        }
+    });;
 
     return res.status(200).json({
         msg: "Todo bien"
@@ -49,7 +83,6 @@ controller.myData = async (_, res) => {
         return new Promise((resolve, reject) => {
             fs.readFile(path.join(__dirname, "../memories/", filename), 'utf-8', function (err, content) {
                 if (err) {
-                    onError(err);
                     reject();
                     return;
                 }
