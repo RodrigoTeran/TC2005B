@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FFF;
+        }
+
+        body {
+            display: flex;
+            font-size: 16px;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+            background-color: #1b1b1b;
+        }
+
+        #validate-result {
+            padding: 5px 20px;
+            border-radius: 10000px;
+        }
+
+        .correct {
+            background-color: rgb(10, 151, 10);
+        }
+
+        .incorrect {
+            background-color: rgb(172, 11, 11);
+        }
+
+        .title {
+            background-color: rgb(81, 3, 214);
+            padding: 7.5px 12px;
+            border-radius: 10000px;
+            margin: 10px 0;
+        }
+
+        form {
+            margin-top: 10px;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"] {
+            height: 40px;
+            font-size: 1.1rem;
+            padding-left: 10px;
+            color: #000;
+        }
+
+        form input[type="text"]:focus {
+            outline: none;
+        }
+
+        form button[type="submit"] {
+            height: 40px;
+            padding: 0 20px;
+            cursor: pointer;
+            background-color: rgb(81, 3, 214);
+            border: none;
+        }
+
+        @media (hover: hover) and (pointer:fine) {
+            form button[type="submit"]:hover {
+                background-color: rgb(97, 28, 216);
+            }
+        }
+    </style>
+    <title>TC2005B | Laboratorio 6</title>
+</head>
+
+<body>
+    <h1>
+        Validador de contraseñas ✏️
+    </h1>
+    <div class="title">
+        Reglas para que una contrasela sea válida:
+    </div>
+    <ul>
+        <li>La contraseña al menos debe de ser de 8 caracteres</li>
+        <li>La contraseña tiene al menos una letra mayúscula</li>
+        <li>La contraseña tiene al menos una letra minúscula</li>
+        <li>La contraseña tiene al menos un dígito</li>
+        <li>La contraseña tiene al menos un caracter especial</li>
+    </ul>
+    <form id="form-validate-password">
+        <input name="input" type="text" id="input-password">
+        <button type="submit">
+            Validar
+        </button>
+    </form>
+    <div id="validate-result"></div>
+    <script>
+        const form = document.getElementById("form-validate-password");
+        const inputPassword = document.getElementById("input-password");
+        const validateResult = document.getElementById("validate-result");
+        let inputValue = "";
+
+        /**
+         * This function validates an input and returns the result in text
+         * @param {string} inputValue - The current value of the input
+         * @returns The text to be written at the DOM
+         */
+        const validate = (inputValue) => {
+            const checkLength = new RegExp('(?=.{8,})');
+            const checkMayus = new RegExp('(?=.*[A-Z])');
+            const checkMin = new RegExp('(?=.*[a-z])');
+            const checkDigits = new RegExp('(?=.*[0-9])');
+            const checkSpecialChar = new RegExp('([^A-Za-z0-9])');
+            const resLength = checkLength.test(inputValue);
+            const resMayus = checkMayus.test(inputValue);
+            const resMin = checkMin.test(inputValue);
+            const resDigits = checkDigits.test(inputValue);
+            const resSpecialChar = checkSpecialChar.test(inputValue);
+            if (!resLength) {
+                validateResult.classList = "incorrect";
+                return "El número mínimo de caracteres debe de ser 8"
+            }
+            if (!resMayus) {
+                validateResult.classList = "incorrect";
+                return "La contraseña debe de tener al menos una letra en mayúscula"
+            }
+            if (!resMin) {
+                validateResult.classList = "incorrect";
+                return "La contraseña debe de tener al menos una letra en minúscula"
+            }
+            if (!resDigits) {
+                validateResult.classList = "incorrect";
+                return "La contraseña debe de tener al menos un digito"
+            }
+            if (!resSpecialChar) {
+                validateResult.classList = "incorrect";
+                return "La contraseña debe de tener al menos un caracter especial"
+            }
+
+            validateResult.classList = "correct";
+            return "Contraseña válida"
+        }
+
+        const onSubmit = (e) => {
+            e.preventDefault();
+            const result = validate(inputValue);
+            validateResult.innerText = result;
+        };
+
+        const onChange = (e) => {
+            inputValue = e.target.value;
+            validateResult.innerText = "";
+            validateResult.classList = "";
+        };
+
+        form.addEventListener("submit", onSubmit);
+        inputPassword.addEventListener("change", onChange);
+    </script>
+</body>
+
+</html>
