@@ -3,22 +3,41 @@
 
 <head>
     <%- include('../partials/head'); %>
+        <link rel="stylesheet" href="/public/assets/index.css">
 </head>
 
 <body>
-
-    <header>
-        <%- include('../partials/header'); %>
-    </header>
-
     <main>
-        <div>
-            Looool
-        </div>
-        <div>
-            <%= variable %>
+        <div class="card">
+            <h1 id="h1">
+                <%= msg %>
+            </h1>
+            <nav>
+                <div class="title">
+                    Secciones:
+                </div>
+                <ul class="sections">
+                    <li>
+                        <a target="_blank" href="pokemon">Pokemon</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="memories">Memorias</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="registry">Registro de memorias</a>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <p class="description">
+                    En las diferentes secciones de esta aplicación
+                    <br>
+                    podrás probar diferentes aplicaciones...
+                </p>
+            </main>
         </div>
     </main>
+
 </body>
 
 </html>
