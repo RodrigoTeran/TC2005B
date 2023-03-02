@@ -75,7 +75,7 @@ controller.deleteData = (_, res) => {
     });
 };
 
-controller.myData = async (_, res) => {
+controller.myData = async () => {
     const files = fs.readdirSync(path.join(__dirname, "../memories"));
     const resData = await Promise.all(files.map(async (filename) => {
         return new Promise((resolve, reject) => {
@@ -92,9 +92,7 @@ controller.myData = async (_, res) => {
         });
     }));
 
-    return res.status(200).json({
-        msg: resData
-    });
+    return resData;
 };
 
 
