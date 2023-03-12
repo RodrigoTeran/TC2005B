@@ -1,0 +1,36 @@
+main>form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main>form input[type="text"] {
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    outline: none;
+}
+
+main>form textarea {
+    padding: 10px;
+    border: 1px solid #444;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+main>form button[type="submit"] {
+    height: 35px;
+    border: none;
+    background-color: #0f94dc;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+@media (hover:hover) and (pointer:fine) {
+    main>form button[type="submit"]:hover {
+        background-color: #20a4eb;
+    }
+}
