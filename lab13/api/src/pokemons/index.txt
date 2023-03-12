@@ -2,3 +2,6 @@
 bulbasaur
 ivysaur
 venusaur
+caterpie
+pikachu
+raichu

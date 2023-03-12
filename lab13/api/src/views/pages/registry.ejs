@@ -15,7 +15,16 @@
         <button id="delete-btn" class="delete_memories">Borrar memorias</button>
     </div>
     <div id="memories">
-
+        <% for (let msg of data) { %>
+            <div>
+                <div class="title">
+                    <%= msg.name %>
+                </div>
+                <div class="msg">
+                    <%= msg.message %>
+                </div>
+            </div>
+            <% } %>
     </div>
     <script src="/public/js/registry.js"></script>
 </body>

@@ -17,11 +17,13 @@ router.get("/memories", (_, res) => {
 router.get("/pokemon", (_, res) => {
     res.render('pages/pokemon');
 });
-router.get("/registry", (_, res) => {
-    res.render('pages/registry');
+router.get("/registry", async (_, res) => {
+    const data = await myData();
+    res.render('pages/registry', {
+        data
+    });
 });
 
-router.get("/api/datos", myData);
 router.post("/api/datos", createData);
 router.delete("/api/datos", deleteData);
 router.post("/api/pokemon", createPokemonRegistry);

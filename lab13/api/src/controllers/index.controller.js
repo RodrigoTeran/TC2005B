@@ -47,12 +47,8 @@ controller.deleteData = (_, res) => {
     });
 };
 
-controller.myData = async (_, res) => {
-    const resData = await Msgs.fetchAll();
-
-    return res.status(200).json({
-        msg: resData
-    });
+controller.myData = async () => {
+    return await Msgs.fetchAll();
 };
 
 
