@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head'); %>
+        <link rel="stylesheet" href="/public/assets/index.css">
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <h1 id="h1">
+                <%= msg %>
+            </h1>
+            <h3>
+                Hola <%= name %>!
+            </h3>
+            <nav>
+                <div class="title">
+                    Secciones:
+                </div>
+                <ul class="sections">
+                    <li>
+                        <a target="_blank" href="pokemon">Pokemon</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="memories">Memorias</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="registry">Registro de memorias</a>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <p class="description">
+                    En las diferentes secciones de esta aplicación
+                    <br>
+                    podrás probar diferentes aplicaciones...
+                </p>
+            </main>
+        </div>
+    </main>
+
+</body>
+
+</html>

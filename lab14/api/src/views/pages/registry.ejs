@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head'); %>
+        <link rel="stylesheet" href="/public/assets/registry.css">
+        <title>TC2005B | Laboratorio 10</title>
+</head>
+
+<body>
+    <h1>
+        Memorias
+    </h1>
+    <div class="container">
+        <button id="delete-btn" class="delete_memories">Borrar memorias</button>
+    </div>
+    <div id="memories">
+        <% for (let msg of data) { %>
+            <div>
+                <div class="title">
+                    <%= msg.name %>
+                </div>
+                <div class="msg">
+                    <%= msg.message %>
+                </div>
+            </div>
+            <% } %>
+    </div>
+    <script src="/public/js/registry.js"></script>
+</body>
+
+</html>
