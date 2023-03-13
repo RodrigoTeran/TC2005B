@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: #0f94dc;
+}
+
+h1 {
+    color: #FFF;
+    margin: 50px 0;
+    padding-left: 30px;
+}
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 0 30px;
+}
+
+#wrapper>div {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 20px;
+}
+#wrapper>div div{
+    text-align: center;
+}
