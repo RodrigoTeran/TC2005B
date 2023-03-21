@@ -16,6 +16,7 @@
         <main>
             <form id="form">
                 <input type="text" name="name" id="name" placeholder="Nombre">
+                <input type="hidden" name="_csrf" id="hidden" value="<%= csrfToken %>">
                 <textarea maxlength="1000" placeholder="Mensajín" name="message" id="message" cols="30"
                     rows="10"></textarea>
                 <button type="submit">Guardar</button>
